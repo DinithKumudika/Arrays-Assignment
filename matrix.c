@@ -36,6 +36,7 @@ int main()
     matrix2element(row2, column2);
 
     addition(row1, column1);
+    multiplication(column1,column2,row1);
 
     return 0;
 }
@@ -97,8 +98,11 @@ void addition(int row1, int column1)
         printf("Addition of Two matrices = \n");
         for (b = 0; b < column1; ++b)
         {
-            printf("\n");
             printf("%d  ", add[a][b]);
+            if(b==column1-1)
+            {
+                printf("\n");
+            }
         }
     }
 }
@@ -119,6 +123,19 @@ void multiplication(int column1, int column2, int row1)
             {
                 multiply[i][j] += first[i][k] * second[k][j];
             }
+        }
+    }
+    for(a=0;a<row1;++a)
+    {
+        printf("Multiplication of two matrices\n");
+        for(b=0;b<column1;++b)
+        {
+            printf("%d ",multiply[a][b]);
+            if(b==column1-1)
+            {
+                printf("\n");
+            }
+            
         }
     }
 }

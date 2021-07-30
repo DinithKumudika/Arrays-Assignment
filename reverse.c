@@ -12,7 +12,7 @@ int main()
     char reverse[256];
 
     printf("Enter the Sentence-:");
-    scanf("%s", sentence);
+    fgets(sentence,256,stdin);
     
     length = strlen(sentence);
     y = length -1;
